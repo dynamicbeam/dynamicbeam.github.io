@@ -13,7 +13,7 @@ module.exports = {
         text: '友情链接',
         ariaLabel: '友情链接',
         items: [
-          { text: 'Github', link: 'https://github.com/kagurawill/' },
+          { text: 'Github', link: 'https://github.com/dynamicbeam/' },
           { text: 'CSDN', link: 'https://blog.csdn.net/kagurawill' }
         ]
       }
