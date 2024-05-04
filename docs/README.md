@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /hero.png
-heroText: 努力
+heroText: 记录
 # tagline: Hero 副标题
 actionText: 立即进入 →
 actionLink: /blog/frontend/

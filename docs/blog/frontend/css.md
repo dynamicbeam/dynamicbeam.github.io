@@ -1,9 +1,4 @@
----
-sidebar: 'auto'
-sidebarDepth: 6
----
-
-# 我是shuo吗
+## 我是shuo吗
 ```shell
 ps -ef|grep jaa
 ```
@@ -36,4 +31,4 @@ gygjkjk
 >kdsjfa
 djfsfhsad
 
-# 睡前必g
+## 睡前必g

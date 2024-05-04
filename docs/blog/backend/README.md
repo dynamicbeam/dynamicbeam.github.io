@@ -1,3 +1,7 @@
+---
+sidebar: 'auto'
+sidebarDepth: 6
+---
 
 # 我是shuo吗
 ```shell
