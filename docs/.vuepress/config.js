@@ -3,7 +3,7 @@ module.exports = {
   description: 'Just playing around',
   themeConfig: {
     // displayAllHeaders: true,
-    logo: '/assets/img/logo.png',
+    logo: '/assets/img/logo.PNG',
     nav: [
       { text: 'Home', link: '/' },
       {
