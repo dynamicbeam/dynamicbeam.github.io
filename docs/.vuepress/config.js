@@ -43,7 +43,7 @@ module.exports = {
       ],
       '/blog/others/': [
         ['vscode+github图床','vscode+github图床'],
-        ['js','es6'] 
+        ['服务安装','服务安装'] 
       ]
     },
     // sidebar: 'auto',
