@@ -43,7 +43,9 @@ module.exports = {
       ],
       '/blog/others/': [
         ['vscode+github图床','vscode+github图床'],
-        ['服务安装','服务安装'] 
+        ['服务安装','服务安装'],
+        ['Docker教程','Docker教程'],
+        
       ]
     },
     // sidebar: 'auto',
