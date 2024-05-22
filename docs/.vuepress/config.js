@@ -45,6 +45,7 @@ module.exports = {
         ['vscode+github图床','vscode+github图床'],
         ['服务安装','服务安装'],
         ['Docker教程','Docker教程'],
+        ['idea热部署','idea热部署'],
         
       ]
     },

@@ -1,5 +1,7 @@
 ## 一些概念
 
+
+
 + 仓库 registry
 
   Docker仓库是集中存放镜像文件的场所。
@@ -16,10 +18,15 @@
 
 ​		Docker利用容器独立运行的一个或一组应用，应用程序或服务运行在容器里面，容器就类似于一个虚拟化的运行环境，容器是用镜像创建的运行实例。
 
-
 ![Docker教程-2024-05-06-22-19-40](http://scwh1zyu0.hn-bkt.clouddn.com/Docker教程-2024-05-06-22-19-40.png)
 
+
+
+
+
 ## 镜像加速
+
+
 
 > docker的镜像默认从[docker hub](https://hub-stage.docker.com/)上拉取,访问会慢点。也可以从国内镜像拉取,方式如下两种：
 
@@ -36,6 +43,8 @@
 ​	里面提供了一个加速器地址：`https://xxxxx.mirror.aliyuncs.com`，将该地址配置到docker中：
 
 ![Docker常用命令-2024-05-06-16-28-32](http://scwh1zyu0.hn-bkt.clouddn.com/Docker常用命令-2024-05-06-16-28-32.png)
+
+
 
 
 
@@ -226,6 +235,8 @@ docker rmi -f $(docker images -qa)
 
 
 ### 容器命令
+
+
 
 `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
 
@@ -626,6 +637,8 @@ docker run -it --privileged=true --volumes-from u1 --name u2 ubuntu
 ```
 
 ![Docker教程-2024-05-06-17-30-16](http://scwh1zyu0.hn-bkt.clouddn.com/Docker教程-2024-05-06-17-30-16.png)
+
+
 
 ## Docker 安装 Mysql
 
