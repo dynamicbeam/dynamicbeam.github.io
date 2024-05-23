@@ -274,8 +274,6 @@ docker rmi -f $(docker images -qa)
 
 
 
-## 
-
 #### 启动交互式容器
 
 
@@ -341,7 +339,7 @@ docker ps [OPTIONS]
 
 
 
-#### 
+
 
 #### 启动已经停止的容器
 
