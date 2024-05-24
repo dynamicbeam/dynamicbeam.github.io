@@ -15,7 +15,7 @@
 + **切换全屏 :** F11
 + **切换到下一行** : <u>ctrl+enter</u>
 + **显示git** : ctrl + shift + g
-+ **全局查找文件：**ctrl + shift + f
++ **全局查找文件：** ctrl + shift + f
 + **显示相关插件的命令(如：git log)**：ctrl + shift + p
 + **选中文字**：shift + left / right / up / down
 + **折叠代码**： ctrl + k + 0-9 (0是完全折叠)
@@ -23,8 +23,8 @@
 + **快速切换主题**：ctrl + k / ctrl + t
 + **快速回到顶部** ： ctrl + home
 + **快速回到底部** : ctrl + end
-+ **格式化选定代码** ：<u>ctrl +f</u>
-+ **全局替换：**ctrl + shift + h
-+ **当前文件替换：**ctrl + h
-+ **打开最近打开的文件夹：**ctrl + r
-+ **打开最近打开的文件：**ctrl + E
++ **格式化选定代码** ：<u>ctrl +f</u> 
++ **全局替换：** ctrl + shift + h
++ **当前文件替换：** ctrl + h
++ **打开最近打开的文件夹：** ctrl + r
++ **打开最近打开的文件：** ctrl + E
