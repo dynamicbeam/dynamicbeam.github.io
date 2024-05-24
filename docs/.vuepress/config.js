@@ -46,6 +46,7 @@ module.exports = {
         ['服务安装','服务安装'],
         ['Docker教程','Docker教程'],
         ['idea热部署','idea热部署'],
+        ['vscode 常用快捷键','vscode 常用快捷键'],
         
       ]
     },
