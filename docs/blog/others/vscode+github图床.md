@@ -22,6 +22,7 @@
 
 
 # 过程中遇到的问题
++ 需要注意的是github要求仓库大小不超过1G，否则会被检测到做图床，可以快到1G时另外建一个库
 + github图片显示不了
 解析不到这个域名`raw.githubusercontent.com`，将ip加到本地hosts
 
