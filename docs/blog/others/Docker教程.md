@@ -18,7 +18,7 @@
 
 ​		Docker利用容器独立运行的一个或一组应用，应用程序或服务运行在容器里面，容器就类似于一个虚拟化的运行环境，容器是用镜像创建的运行实例。
 
-![Docker教程-2024-05-06-22-19-40](http://scwh1zyu0.hn-bkt.clouddn.com/Docker教程-2024-05-06-22-19-40.png)
+![Docker教程-2024-05-06-22-19-40](https://raw.githubusercontent.com/dynamicbeam/picbed/master/Docker教程-2024-05-06-22-19-40.png)
 
 
 
@@ -42,7 +42,7 @@
 
 ​	里面提供了一个加速器地址：`https://xxxxx.mirror.aliyuncs.com`，将该地址配置到docker中：
 
-![Docker常用命令-2024-05-06-16-28-32](http://scwh1zyu0.hn-bkt.clouddn.com/Docker常用命令-2024-05-06-16-28-32.png)
+![Docker常用命令-2024-05-06-16-28-32](https://raw.githubusercontent.com/dynamicbeam/picbed/master/Docker常用命令-2024-05-06-16-28-32.png)
 
 
 
@@ -634,7 +634,7 @@ docker run -it --privileged=true /tmp/test:/tmp/docker --name u1 ubuntu /bin/bas
 docker run -it --privileged=true --volumes-from u1 --name u2 ubuntu
 ```
 
-![Docker教程-2024-05-06-17-30-16](http://scwh1zyu0.hn-bkt.clouddn.com/Docker教程-2024-05-06-17-30-16.png)
+![Docker教程-2024-05-06-17-30-16](https://raw.githubusercontent.com/dynamicbeam/picbed/master/Docker教程-2024-05-06-17-30-16.png)
 
 
 

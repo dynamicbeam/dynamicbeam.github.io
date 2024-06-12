@@ -40,10 +40,10 @@
 3. 修改idea配置
    `file->settings->Advanced Settings     `          
 
-   ![img](http://scwh1zyu0.hn-bkt.clouddn.com/a77fa683392c4aa29ccdc7ca0ca34138.png)
+   ![img](https://raw.githubusercontent.com/dynamicbeam/picbed/master/a77fa683392c4aa29ccdc7ca0ca34138.png)
 
 4. `file->settings->Builds,Execution,Deployment->Compiler   `
 
-   ​           ![img](http://scwh1zyu0.hn-bkt.clouddn.com/d3ca205ec3e0413c8a8b5df00b5d4d71.png)
+   ​           ![img](https://raw.githubusercontent.com/dynamicbeam/picbed/master/d3ca205ec3e0413c8a8b5df00b5d4d71.png)
 
    5. 重启idea后即可实现热部署 

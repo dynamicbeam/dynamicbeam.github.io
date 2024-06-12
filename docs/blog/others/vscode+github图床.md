@@ -35,14 +35,14 @@
 
 + github的访问不是很好的话可以用七牛云代替
 
-![20240503211911](http://scwh1zyu0.hn-bkt.clouddn.com/20240503211911.png)
+![20240503211911](https://raw.githubusercontent.com/dynamicbeam/picbed/master/20240503211911.png)
 
 
 
-![20240503212419](http://scwh1zyu0.hn-bkt.clouddn.com/20240503212419.png)
+![20240503212419](https://raw.githubusercontent.com/dynamicbeam/picbed/master/20240503212419.png)
 
 + vscode不能显示http链接的图片
 
 >`ctrl+shift+p`->预览安全->允许不安全内容
 
-![vscode+github图床-2024-05-04-09-35-05](http://scwh1zyu0.hn-bkt.clouddn.com/vscode+github图床-2024-05-04-09-35-05.png)
+![vscode+github图床-2024-05-04-09-35-05](https://raw.githubusercontent.com/dynamicbeam/picbed/master/vscode+github图床-2024-05-04-09-35-05.png)
