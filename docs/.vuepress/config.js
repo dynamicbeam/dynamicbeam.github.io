@@ -40,6 +40,7 @@ module.exports = {
             ['jquery','jquery']
           ]
         },
+        ['nvm管理nodejs','nvm管理nodejs'],
       ],
       '/blog/others/': [
         ['vscode+github图床','vscode+github图床'],
