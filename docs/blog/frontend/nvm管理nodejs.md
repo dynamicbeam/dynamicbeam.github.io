@@ -1,6 +1,6 @@
 在工作中，我们可能同时在进行2个或者多个[不同的](https://so.csdn.net/so/search?q=%E4%B8%8D%E5%90%8C%E7%9A%84&spm=1001.2101.3001.7020)项目开发，每个项目的需求不同，进而不同项目必须依赖不同版本的NodeJS运行环境，这种情况下，对于维护多个版本的node将会是一件非常麻烦的事情，nvm就是为解决这个问题而产生的，他可以方便的在同一台设备上进行多个node版本之间切换。
 
-### 1、[nvm](https://so.csdn.net/so/search?q=nvm&spm=1001.2101.3001.7020)介绍
+## 1、[nvm](https://so.csdn.net/so/search?q=nvm&spm=1001.2101.3001.7020)介绍
 
 **Node Version Manager（NVM）** 是一种用于管理多个主动节点.js版本的工具。
 
@@ -15,7 +15,7 @@ NVM 允许用户：
 
 ### 
 
-### 2、下载
+## 2、下载
 
 ### 操作系统支持
 
@@ -25,7 +25,8 @@ nvm同时支持Linux和macOS
 
 下载链接：
 
-[https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases "https://github.com/coreybutler/nvm-windows/releases")### 3、安装：
+[https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases "https://github.com/coreybutler/nvm-windows/releases")
+## 3、安装：
 
 如果电脑上之前已经单独安装了node，先卸载（可以在控制面板里面卸载），然后再安装nvm
 
@@ -38,7 +39,7 @@ nvm同时支持Linux和macOS
 就可以看见nvm的版本号啦！ 
 
 
-### 4、配置
+## 4、配置
 
 安装完毕后，找到安装的路径，一些简单配置，
 
@@ -62,17 +63,18 @@ nvm同时支持Linux和macOS
 
 我们先找到nvm所在文件位置，点开`setting.txt`
 
-![](https://img-blog.csdnimg.cn/fe6d4b2d3d0a41d793ceb29db846fd64.png)
+
 
  里面的配置。原本只有2行代码。我们只需要在最后面追加2行代码即可：
 
 ```cobol
-node_mirror: http://npmmirror.com/mirrors/node/npm_mirror: http://registry.npmmirror.com/mirrors/npm/
+node_mirror: http://npmmirror.com/mirrors/node/
+npm_mirror: http://registry.npmmirror.com/mirrors/npm/
 ```
 
 然后保存关闭。
 
-### 5、使用
+## 5、使用
 
 打开cmd
 
@@ -107,7 +109,7 @@ node_mirror: http://npmmirror.com/mirrors/node/npm_mirror: http://registry.npmmi
 就可以看到当前版本已经是18.20.2了
 
 
-### 常用命令：
+## 常用命令：
 
 ```cobol
 nvm off                     // 禁用node.js版本管理(不卸载任何东西)
@@ -161,12 +163,11 @@ nvm命令行操作命令
 16,nvm version 查看当前的版本
 ```
 
- 在做项目的时候。不同的项目使用的nodejs版本可能不一样。我们可以在配置文件里看见：
+ 在做项目的时候。不同的项目使用的nodejs版本可能不一样。我们可以在配置文件package.json里看见：
 
-![](https://img-blog.csdnimg.cn/b2910105c34641da90a9cbb3e225cdfa.png)
 
  由于nodejs版本和npm版本的不同。导致项目无法运行。所以我们就需要用到nvm这个工具了！
 
-### 结论
+## 结论
 
 nvm对于任何Node.js开发人员来说都是一个很棒的工具。它可以实现无忧安装，并在不同版本之间轻松切换，从而节省了真正重要的事情的时间
