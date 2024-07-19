@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CentOS Docker 安装 | 吴志勇的个人博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="Just playing around">
+    
+    <link rel="preload" href="/assets/css/0.styles.acc2b136.css" as="style"><link rel="preload" href="/assets/js/app.a0ac3503.js" as="script"><link rel="preload" href="/assets/js/2.8676788c.js" as="script"><link rel="preload" href="/assets/js/1.e8452652.js" as="script"><link rel="preload" href="/assets/js/34.e1db5b1b.js" as="script"><link rel="prefetch" href="/assets/js/10.0ba6aeeb.js"><link rel="prefetch" href="/assets/js/11.9c9e0b78.js"><link rel="prefetch" href="/assets/js/12.8865f261.js"><link rel="prefetch" href="/assets/js/13.ce099880.js"><link rel="prefetch" href="/assets/js/14.4d933bc3.js"><link rel="prefetch" href="/assets/js/15.f85148cf.js"><link rel="prefetch" href="/assets/js/16.2026d831.js"><link rel="prefetch" href="/assets/js/17.3cf742bf.js"><link rel="prefetch" href="/assets/js/18.a692e617.js"><link rel="prefetch" href="/assets/js/19.b92d1371.js"><link rel="prefetch" href="/assets/js/20.a2295ea4.js"><link rel="prefetch" href="/assets/js/21.a5ae5bff.js"><link rel="prefetch" href="/assets/js/22.c61f0f63.js"><link rel="prefetch" href="/assets/js/23.72986621.js"><link rel="prefetch" href="/assets/js/24.7dbcbc63.js"><link rel="prefetch" href="/assets/js/25.a7482220.js"><link rel="prefetch" href="/assets/js/26.9ee52407.js"><link rel="prefetch" href="/assets/js/27.bd5e574a.js"><link rel="prefetch" href="/assets/js/28.5c46f232.js"><link rel="prefetch" href="/assets/js/29.748b9750.js"><link rel="prefetch" href="/assets/js/3.df6119e3.js"><link rel="prefetch" href="/assets/js/30.5cc45675.js"><link rel="prefetch" href="/assets/js/31.beafb741.js"><link rel="prefetch" href="/assets/js/32.25221bc6.js"><link rel="prefetch" href="/assets/js/33.6ec3f3b6.js"><link rel="prefetch" href="/assets/js/4.c188f2b0.js"><link rel="prefetch" href="/assets/js/5.bd16c690.js"><link rel="prefetch" href="/assets/js/6.c71ddbdd.js"><link rel="prefetch" href="/assets/js/7.3d35bdfd.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.77260563.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.acc2b136.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="吴志勇的个人博客" class="logo"> <span class="site-name can-hide">吴志勇的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guide" class="dropdown-title"><span class="title">Guide</span> <span class="arrow down"></span></button> <button type="button" aria-label="Guide" class="mobile-dropdown-title"><span class="title">Guide</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/frontend/css.html" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/backend/" class="nav-link">
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/others/vscode+github图床.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><span class="title">友情链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="友情链接" class="mobile-dropdown-title"><span class="title">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dynamicbeam/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/kagurawill" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guide" class="dropdown-title"><span class="title">Guide</span> <span class="arrow down"></span></button> <button type="button" aria-label="Guide" class="mobile-dropdown-title"><span class="title">Guide</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/frontend/css.html" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/backend/" class="nav-link">
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/blog/others/vscode+github图床.html" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="友情链接" class="dropdown-title"><span class="title">友情链接</span> <span class="arrow down"></span></button> <button type="button" aria-label="友情链接" class="mobile-dropdown-title"><span class="title">友情链接</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dynamicbeam/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/kagurawill" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/others/vscode+github图床.html" class="sidebar-link">vscode+github图床</a></li><li><a href="/blog/others/服务安装.html" class="active sidebar-link">服务安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#centos-docker-安装" class="sidebar-link">CentOS Docker 安装</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#docker安装alist" class="sidebar-link">Docker安装Alist</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#docker安装frps" class="sidebar-link">Docker安装frps</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#服务端安装" class="sidebar-link">服务端安装</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#客户端安装" class="sidebar-link">客户端安装</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#访问" class="sidebar-link">访问</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#下载地址" class="sidebar-link">下载地址</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#iptv直播源安装" class="sidebar-link">iptv直播源安装</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#mysql安装" class="sidebar-link">MySQL安装</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#redis安装" class="sidebar-link">Redis安装</a></li><li class="sidebar-sub-header"><a href="/blog/others/服务安装.html#nginx-proxy-manager" class="sidebar-link">Nginx Proxy Manager</a></li></ul></li><li><a href="/blog/others/Docker教程.html" class="sidebar-link">Docker教程</a></li><li><a href="/blog/others/idea热部署.html" class="sidebar-link">idea热部署</a></li><li><a href="/blog/others/vscode 常用快捷键.html" class="sidebar-link">vscode 常用快捷键</a></li><li><a href="/blog/others/旧笔记本安装pve+黑群晖.html" class="sidebar-link">旧笔记本安装pve+黑群晖</a></li><li><a href="/blog/others/使用阿里云容器镜像服务.html" class="sidebar-link">使用阿里云容器镜像服务</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="centos-docker-安装"><a href="#centos-docker-安装" class="header-anchor">#</a> CentOS Docker 安装</h2> <p><code>curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</code></p> <p><a href="https://www.runoob.com/docker/centos-docker-install.html" target="_blank" rel="noopener noreferrer">参考<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>设置开机自启动</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl <span class="token builtin class-name">enable</span> <span class="token function">docker</span> <span class="token comment"># 开机自动启动docker</span>
+
+systemctl start <span class="token function">docker</span> <span class="token comment"># 启动docker</span>
+systemctl restart <span class="token function">docker</span> <span class="token comment"># 重启dokcer </span>
+
+</code></pre></div><h2 id="docker安装alist"><a href="#docker安装alist" class="header-anchor">#</a> Docker安装Alist</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#这里是用的dockerdesktop，映射目录可以改成你自己的</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-di</span> <span class="token parameter variable">--restart</span><span class="token operator">=</span>always <span class="token parameter variable">-v</span> /root/alist/data:/opt/alist/data <span class="token parameter variable">-p</span> <span class="token number">5244</span>:5244 <span class="token parameter variable">-e</span> <span class="token assign-left variable">PUID</span><span class="token operator">=</span><span class="token number">0</span> <span class="token parameter variable">-e</span> <span class="token assign-left variable">PGID</span><span class="token operator">=</span><span class="token number">0</span> <span class="token parameter variable">-e</span> <span class="token assign-left variable">UMASK</span><span class="token operator">=</span>022 <span class="token parameter variable">--name</span><span class="token operator">=</span><span class="token string">&quot;alist&quot;</span> xhofe/alist:latest
+<span class="token comment">#首次登陆建议设置成指定密码</span>
+<span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> alist ./alist admin <span class="token builtin class-name">set</span> NEW_PASSWORD
+</code></pre></div><h2 id="docker安装frps"><a href="#docker安装frps" class="header-anchor">#</a> Docker安装frps</h2> <h3 id="服务端安装"><a href="#服务端安装" class="header-anchor">#</a> 服务端安装</h3> <blockquote><p>拉取镜像</p></blockquote> <p><code>docker pull snowdreamtech/frps</code></p> <blockquote><p>配置</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mkdir</span> /etc/frp
+<span class="token function">vim</span> /etc/frp/frps.toml
+<span class="token comment"># 输入以下内容</span>
+
+<span class="token punctuation">[</span>common<span class="token punctuation">]</span>
+<span class="token comment"># 监听端口</span>
+bind_port <span class="token operator">=</span> <span class="token number">7000</span>
+<span class="token comment"># 面板端口</span>
+dashboard_port <span class="token operator">=</span> <span class="token number">7500</span>
+<span class="token comment"># 登录面板账号设置</span>
+dashboard_user <span class="token operator">=</span> admin
+dashboard_pwd <span class="token operator">=</span> admin
+<span class="token comment"># 设置http及https协议下代理端口（非重要）</span>
+<span class="token comment"># vhost_http_port = 7080</span>
+<span class="token comment"># vhost_https_port = 7081</span>
+<span class="token comment"># 身份验证</span>
+<span class="token comment"># token = 12345678</span>
+</code></pre></div><blockquote><p>启动</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> run <span class="token parameter variable">--restart</span><span class="token operator">=</span>always <span class="token parameter variable">--network</span> <span class="token function">host</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-v</span> /etc/frp/frps.toml:/etc/frp/frps.toml <span class="token parameter variable">--name</span> frps snowdreamtech/frps
+</code></pre></div><blockquote><p>启动成功查看端口占用：</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">netstat</span> <span class="token parameter variable">-nltp</span> <span class="token operator">|</span> <span class="token function">grep</span> frps
+</code></pre></div><blockquote><p>服务端面板查看</p></blockquote> <p><img src="https://raw.githubusercontent.com/dynamicbeam/picbed/master/%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85-2024-05-09-14-47-10.png" alt="服务安装-2024-05-09-14-47-10"></p> <h3 id="客户端安装"><a href="#客户端安装" class="header-anchor">#</a> 客户端安装</h3> <blockquote><p>客户端配置如下：</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mkdir</span> /etc/frp
+<span class="token function">vim</span> /etc/frp/frpc.toml
+<span class="token comment"># 输入以下内容</span>
+
+<span class="token punctuation">[</span>common<span class="token punctuation">]</span>
+<span class="token comment"># server_addr为FRPS服务器IP地址</span>
+server_addr <span class="token operator">=</span> <span class="token number">120.55</span>.170.164
+<span class="token comment"># server_port为服务端监听端口，bind_port</span>
+server_port <span class="token operator">=</span> <span class="token number">7000</span>
+<span class="token comment"># 身份验证</span>
+token <span class="token operator">=</span> <span class="token number">12345678</span>
+
+<span class="token comment"># 内网穿透22端口</span>
+<span class="token punctuation">[</span>ssh<span class="token punctuation">]</span>
+<span class="token builtin class-name">type</span> <span class="token operator">=</span> tcp
+local_ip <span class="token operator">=</span> <span class="token number">127.0</span>.0.1
+local_port <span class="token operator">=</span> <span class="token number">22</span>
+remote_port <span class="token operator">=</span> <span class="token number">15000</span>
+
+<span class="token comment"># 内网穿透80端口</span>
+<span class="token punctuation">[</span>nginx<span class="token punctuation">]</span>
+<span class="token builtin class-name">type</span> <span class="token operator">=</span> tcp
+local_ip <span class="token operator">=</span> <span class="token number">127.0</span>.0.1
+local_port <span class="token operator">=</span> <span class="token number">80</span>
+remote_port <span class="token operator">=</span> <span class="token number">15001</span>
+</code></pre></div><blockquote><p>客户端启动</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> run <span class="token parameter variable">--restart</span><span class="token operator">=</span>always <span class="token parameter variable">--network</span> <span class="token function">host</span> <span class="token parameter variable">-d</span> <span class="token parameter variable">-v</span> /etc/frp/frpc.toml:/etc/frp/frpc.toml <span class="token parameter variable">--name</span> frpc snowdreamtech/frpc
+</code></pre></div><h3 id="访问"><a href="#访问" class="header-anchor">#</a> 访问</h3> <blockquote><p>上面客户端暴露的ssh和Nginx服务，访问如下：</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 格式 ssh 内网计算机用户@转发服务器IP -p 转发服务器代理端口</span>
+<span class="token function">ssh</span> root@120.55.170.164 <span class="token parameter variable">-p</span> <span class="token number">15000</span>
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 在浏览器输入地址就可内网nginx服务了</span>
+http://120.55.170.164:15001
+</code></pre></div><p>windows客户端配置略有不同：</p> <blockquote><p>配置</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code>
+serverAddr <span class="token operator">=</span> <span class="token string">&quot;120.55.170.164&quot;</span>
+serverPort <span class="token operator">=</span> <span class="token number">7000</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">[</span>proxies<span class="token punctuation">]</span><span class="token punctuation">]</span>
+name <span class="token operator">=</span> <span class="token string">&quot;web&quot;</span>
+<span class="token builtin class-name">type</span> <span class="token operator">=</span> <span class="token string">&quot;tcp&quot;</span>
+localIP <span class="token operator">=</span> <span class="token string">&quot;127.0.0.1&quot;</span>
+localPort <span class="token operator">=</span> <span class="token number">3100</span>
+remotePort <span class="token operator">=</span> <span class="token number">3100</span>
+
+<span class="token punctuation">[</span><span class="token punctuation">[</span>proxies<span class="token punctuation">]</span><span class="token punctuation">]</span>
+name <span class="token operator">=</span> <span class="token string">&quot;web&quot;</span>
+<span class="token builtin class-name">type</span> <span class="token operator">=</span> <span class="token string">&quot;http&quot;</span>
+localIP <span class="token operator">=</span> <span class="token string">&quot;127.0.0.1&quot;</span>
+localPort <span class="token operator">=</span> <span class="token number">3100</span>
+customDomains <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;wuzhiyong.eu.org&quot;</span><span class="token punctuation">]</span>
+
+</code></pre></div><blockquote><p>启动</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code>.<span class="token punctuation">\</span>frpc.exe <span class="token parameter variable">-c</span> .<span class="token punctuation">\</span>frpc.toml
+</code></pre></div><h3 id="下载地址"><a href="#下载地址" class="header-anchor">#</a> 下载地址</h3> <ul><li>官方下载地址：https://github.com/fatedier/frp</li> <li>安卓版载地址：https://github.com/mainfunx/frpc_android</li></ul> <h2 id="iptv直播源安装"><a href="#iptv直播源安装" class="header-anchor">#</a> iptv直播源安装</h2> <p>docker镜像<code>herberthe0229/iptv-sources</code>
+github地址：https://github.com/HerbertHe/iptv-sources</p> <h2 id="mysql安装"><a href="#mysql安装" class="header-anchor">#</a> MySQL安装</h2> <ul><li>下载MySQL<code>5.7</code>的docker镜像：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> pull mysql:5.7
+</code></pre></div><ul><li>使用如下命令启动MySQL服务：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> run <span class="token parameter variable">-p</span> <span class="token number">3306</span>:3306 <span class="token parameter variable">--name</span> mysql <span class="token punctuation">\</span>
+<span class="token parameter variable">-v</span> /mydata/mysql/log:/var/log/mysql <span class="token punctuation">\</span>
+<span class="token parameter variable">-v</span> /mydata/mysql/data:/var/lib/mysql <span class="token punctuation">\</span>
+<span class="token parameter variable">-v</span> /mydata/mysql/conf:/etc/mysql/conf.d <span class="token punctuation">\</span>
+<span class="token parameter variable">-e</span> <span class="token assign-left variable">MYSQL_ROOT_PASSWORD</span><span class="token operator">=</span>root  <span class="token punctuation">\</span>
+<span class="token parameter variable">-d</span> mysql:5.7
+</code></pre></div><ul><li><p>参数说明</p> <ul><li>-p 3306:3306：将容器的3306端口映射到主机的3306端口</li> <li>-v /mydata/mysql/conf:/etc/mysql/conf.d \：将配置文件夹挂在到主机</li> <li>-v /mydata/mysql/log:/var/log/mysql：将日志文件夹挂载到主机</li> <li>-v /mydata/mysql/data:/var/lib/mysql/：将数据文件夹挂载到主机</li> <li>-e MYSQL_ROOT_PASSWORD=root：初始化root用户的密码</li></ul> <blockquote><p>/mydata/mysql/data目录下创建my.conf,配置如下：</p></blockquote></li></ul> <div class="language- extra-class"><pre class="language-text"><code>[client]
+default-character-set=utf8
+#character-set-server=utf8
+#mysqlde utf8字符集默认为3位的，不支持emoji表情及部分不常见的汉字，故推荐使用utf8mb4
+ 
+[mysql]
+default-character-set=utf8
+#character-set-server=utf8
+ 
+[mysqld]
+#character-set-server=utf8
+ 
+performance_schema=off #效果明显
+table_open_cache=64
+ 
+ 
+performance_schema_max_table_instances=400 
+innodb_buffer_pool_chunk_size=64M 
+innodb_buffer_pool_size=64M 
+ 
+query_cache_size=16M
+tmp_table_size=18M
+key_buffer_size=32m
+ 
+#skip-grant-tables
+</code></pre></div><ul><li>进入运行MySQL的docker容器：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> mysql /bin/bash
+</code></pre></div><ul><li>使用MySQL命令打开客户端：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>mysql <span class="token parameter variable">-uroot</span> <span class="token parameter variable">-proot</span> --default-character-set<span class="token operator">=</span>utf8
+</code></pre></div><h2 id="redis安装"><a href="#redis安装" class="header-anchor">#</a> Redis安装</h2> <ul><li>下载Redis<code>7</code>的docker镜像：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> pull redis:7
+</code></pre></div><ul><li>使用如下命令启动Redis服务：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> run <span class="token parameter variable">-p</span> <span class="token number">6379</span>:6379 <span class="token parameter variable">--name</span> redis <span class="token punctuation">\</span>
+<span class="token parameter variable">-v</span> /mydata/redis/data:/data <span class="token punctuation">\</span>
+<span class="token parameter variable">-d</span> redis:7 redis-server <span class="token parameter variable">--appendonly</span> <span class="token function">yes</span>
+</code></pre></div><ul><li>进入Redis容器使用<code>redis-cli</code>命令进行连接：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token parameter variable">-it</span> redis redis-cli
+</code></pre></div><h2 id="nginx-proxy-manager"><a href="#nginx-proxy-manager" class="header-anchor">#</a> Nginx Proxy Manager</h2> <blockquote><p>拉取镜像:</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> pull jc21/nginx-proxy-manager
+</code></pre></div><blockquote><p>启动：</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">docker</span> run <span class="token parameter variable">-d</span> <span class="token parameter variable">--restart</span><span class="token operator">=</span>always <span class="token parameter variable">--name</span> nginx-proxy-manager <span class="token punctuation">\</span>
+  <span class="token parameter variable">-p</span> <span class="token number">80</span>:80 <span class="token parameter variable">-p</span> <span class="token number">443</span>:443 <span class="token parameter variable">-p</span> <span class="token number">81</span>:81 <span class="token punctuation">\</span>
+  <span class="token parameter variable">-v</span> /root/docker/nginx-proxy-manager/data:/data <span class="token punctuation">\</span>
+  <span class="token parameter variable">-v</span> /root/docker/nginx-proxy-manager/letsencrypt:/etc/letsencrypt <span class="token punctuation">\</span>
+  jc21/nginx-proxy-manager
+</code></pre></div><blockquote><p>修改域名解析：由<code>@</code>修改为<code>*</code></p></blockquote> <blockquote><p>直接拉取镜像拉取不下来，修改为阿里云的镜像<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" target="_blank" rel="noopener noreferrer">容器镜像服务 (aliyun.com)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>默认登陆的用户名：<code>admin@example.com</code> 密码：<code>changeme</code></p> <blockquote><p>试了下<code>Nginx Proxy Manager</code>不能代理域名下的端口，换成nginx，就是没有配置界面了。</p></blockquote> <ol><li>安装Nginx：</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> yum <span class="token function">install</span> nginx
+</code></pre></div><ol start="2"><li>启动Nginx服务：</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> systemctl start nginx
+</code></pre></div><ol start="3"><li>（可选）设置Nginx开机自启：</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> nginx
+</code></pre></div><ol start="4"><li>修改配置：<code>vi /etc/nginx/nginx.conf</code></li></ol> <div class="language-conf extra-class"><pre class="language-text"><code>server { 
+		listen       800; #80端口被运营商禁用了，要备案
+		server_name  alist.wzy1990.eu.org; 
+		location / { 
+		proxy_pass http://localhost:5244; 
+		proxy_set_header   Host    $host; 
+		proxy_set_header   X-Real-IP   $remote_addr; 
+		proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for; 
+		} 
+	} 
+	server { 
+		listen       800; 
+		server_name  iptv.wzy1990.eu.org; 
+		location / { 
+		proxy_pass http://localhost:8080; 
+		proxy_set_header   Host    $host; 
+		proxy_set_header   X-Real-IP   $remote_addr; 
+		proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for; 
+		} 
+	} 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/others/vscode+github图床.html" class="prev">
+        vscode+github图床
+      </a></span> <span class="next"><a href="/blog/others/Docker教程.html">
+        Docker教程
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a0ac3503.js" defer></script><script src="/assets/js/2.8676788c.js" defer></script><script src="/assets/js/1.e8452652.js" defer></script><script src="/assets/js/34.e1db5b1b.js" defer></script>
+  </body>
+</html>
